@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="styleshee\
+t">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <title>Hyde Park</title>
+    <link rel="stylesheet" href="{% static 'CSS/Base.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'Home' %}">Base Temp</a></h1>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+
+</html>
