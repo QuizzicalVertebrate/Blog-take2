@@ -11,12 +11,27 @@ t">
 
 <body>
     <header>
-        <h1><a href="{% url 'Home' %}">Base Temp</a></h1>
+        <h1><a href="{% url 'Home' %}">Hyde Park</a></h1>
+    </header>
+    <header>
+        <h1><a href="{% url 'Post_New' %}">Get started writing</a></h1>
     </header>
     <div>
+        <header>{% if user.is_authenticated %}
+            <p>Wilkommen {{user.username}}</p>
+            <div>
+                <p><a href="{% url 'logout' %}">If you want to leave.. shakes fist</a></p>
+            </div>
+
+            {% else %}
+            <p>You haven't shown your papers yet</p>
+            <a href="{% url 'login' %}">Do it now</a>
+            {% endif %}
+        </header>
         {% block content %}
         {% endblock content %}
     </div>
+
 </body>
 
 </html>

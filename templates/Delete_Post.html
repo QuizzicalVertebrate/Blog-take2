@@ -1,0 +1,13 @@
+{% extends 'Base.html' %}
+{% block content %}
+<div>
+    <h1>Delete Post</h1>
+    <form action="" method="post">{% csrf_token %}
+        <p>Last chance for {{ post.Title }}</p>
+        <input type="submit" value="Confirm">
+
+
+    </form>
+
+</div>
+{% endblock content %}

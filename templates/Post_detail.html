@@ -8,8 +8,8 @@
 
     {{post.Date}}
 
-
-
-
 </div>
+
+<div><a href="{% url 'post_update' post.pk %}">Thought about it again?</a></div>
+<div><a href="{% url 'Post_Delete' post.pk %}">Ah, so it taka wasn't good at all</a></div>
 {% endblock content %}
