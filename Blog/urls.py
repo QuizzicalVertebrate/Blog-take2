@@ -15,6 +15,8 @@ urlpatterns = [
     path('post/<int:pk>/update',PostUpdateView.as_view(), name = 'post_update'),
 #seems the name must match the route for it to work down to the casing. No idea why
     path('post/<int:pk>/delete',PostDeleteView.as_view(), name = 'post_delete'),
+    
+
 
     
 ]
